@@ -2,11 +2,6 @@ let mealData = document.getElementById('mealData');
 let searchContainer = document.getElementById('searchContainer')
 let submitBtn;
 
-// $("document").ready(function () {
-//     $("#loading").fadeOut(1000, function () {
-//       $("body").css("overflow", "visible");
-//     });
-//   });
 
 $(document).ready(() => {
     searchByName('').then(() => {
@@ -272,7 +267,7 @@ function displayMealDetails(meal) {
     <ul class="list-unstyled d-flex g-3 flex-wrap">
        ${tagsStr}
     </ul>
-    <a target=_blank href="${meal.strSource}" class="btn btn-primary">Source</a>
+    <a target=_blank href="${meal.strSource}" class="btn btn-primary me-1">Source</a>
     <a target=_blank href="${meal.strYoutube}" class="btn btn-danger">YouTube</a>
 </div>`
     mealData.innerHTML = cartona
@@ -283,12 +278,12 @@ function displayMealDetails(meal) {
 function showSearchInputs() {
 
     searchContainer.innerHTML = ` 
-    <div class="row py-4">
-    <div class="col-md-6">
+    <div class="row py-4 ms-5">
+    <div class="col-md-6 pb-3">
         <input onkeyup="searchByName(this.value)" type="text" class="form-control text-white bg-transparent" 
          placeholder="Search By Name...">
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 ">
         <input onkeyup="searchByFirstLetter(this.value)" type="text" maxlength="1" 
         class="form-control text-white bg-transparent" placeholder="Search By First Letter....">
     </div>
